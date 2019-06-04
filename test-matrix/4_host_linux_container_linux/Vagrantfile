@@ -1,0 +1,14 @@
+Vagrant.configure(2) do |config|
+  config.vm.box = "williamyeh/ubuntu-trusty64-docker"
+  #config.vm.box = "williamyeh/debian-jessie64-docker"
+
+  config.vm.provision "shell", inline: <<-SHELL
+    echo "Running for test4..."
+    mkdir /tmp/test
+    cd /tmp/test
+    cp -r /vagrant/* .
+    chown -R vagrant.vagrant /tmp/test 
+    ./run.sh
+  SHELL
+
+end

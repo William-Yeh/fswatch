@@ -1,0 +1,39 @@
+# fswatch - Watch for changes in file system.
+#
+
+#======================================#
+# builder env
+#
+
+FROM golang:1.12.5 AS builder
+LABEL author="william.pjyeh@gmail.com"
+
+WORKDIR       /opt
+
+# unset GOPATH in favor of GO111MODULE
+ENV GO111MODULE on
+ENV GOPATH ""
+
+# fetch imported Go lib...
+COPY go.mod .
+COPY go.sum .
+COPY fswatch.go    .
+
+
+# compile...
+ENV GOOS        windows
+ENV GOARCH      amd64
+ENV CGO_ENABLED 0
+RUN go build -o fswatch-x86_64.exe
+
+
+#======================================#
+# deployment env
+#
+
+FROM mcr.microsoft.com/windows/nanoserver:1809
+LABEL author="william.pjyeh@gmail.com"
+
+COPY --from=builder /opt/fswatch-x86_64.exe   fswatch.exe
+RUN mkdir mnt
+CMD ["fswatch"]
