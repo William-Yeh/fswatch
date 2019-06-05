@@ -28,6 +28,12 @@ Change something under the current directory from the host.
 
 NOTE: it should *not* work.
 
+When there's a mismatch between host OS and container, fswatch may not work well.  Take [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/troubleshoot/#inotify-on-shared-drives-does-not-work) for example:
+
+> **Inotify on shared drives does not work**
+>
+> Currently, `inotify` does not work on Docker Desktop for Windows. This becomes evident, for example, when an application needs to read/write to a container across a mounted drive. Instead of relying on filesystem `inotify`, we recommend using polling features for your framework or programming language.
+
 
 ## Test from the container (inside)
 
