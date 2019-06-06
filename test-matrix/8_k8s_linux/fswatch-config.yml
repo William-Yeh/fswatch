@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fswatch-config
+data:
+  main.css: |
+    body {
+      background-color: yellow;
+    }

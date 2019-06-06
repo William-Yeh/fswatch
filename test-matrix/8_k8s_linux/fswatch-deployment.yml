@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fswatch
+  labels:
+    app: fswatch
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fswatch
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+
+  template:   # pod definition
+    metadata:
+      labels:
+        app: fswatch
+    spec:
+
+      volumes:
+        - name: configmap-volume
+          configMap:
+            name: fswatch-config
+
+      containers:
+        - name: fswatch
+          image: williamyeh/fswatch
+          imagePullPolicy: IfNotPresent
+          command: ["fswatch"]
+          args: ["/mnt/site", "/mnt"]
+          volumeMounts:
+            - mountPath: /mnt/site
+              name: configmap-volume
+              readOnly: true
+
+      #dnsPolicy: ClusterFirst
+      #restartPolicy: Always

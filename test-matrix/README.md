@@ -2,9 +2,9 @@
 
 Test whether the fswatch works in native app mode and in container mode.
 
-| Host OS | Native app | Linux Container | Windows Container |
-|---------|------------|-----------------|-------------------|
-| Linux   | [1](1_native_linux)          | [4](4_host_linux_container_linux)               | N/A               |
+| Host OS | App run as<br/>native app | App run as<br/>Linux Container |  App run as<br/>Windows Container | ‖<br/>‖ | App run in<br/>K8s (Linux Container) |
+|---------|------------|-----------------|-------------------|----|-----------------------|
+| Linux   | [1](1_native_linux)          | [4](4_host_linux_container_linux)               | N/A               | ‖ | [8](8_k8s_linux)             |
 | Mac     | [2](2_native_mac)          | [5](5_host_mac_container_linux)               | N/A               |
 | Windows | [3](3_native_win)          | [6](6_host_win_container_linux) (LCOW)        | [7](7_host_win_container_win) (WCOW)          |
 

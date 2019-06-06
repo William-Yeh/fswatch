@@ -1,0 +1,7 @@
+apiVersion: skaffold/v1beta11
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - fswatch-config.yml
+      - fswatch-deployment.yml

@@ -1,8 +1,8 @@
 # 5: Host OS (Mac) + Container (Linux)
 
-| Host OS | Native app | Linux Container | Windows Container |
-|---------|------------|-----------------|-------------------|
-| Linux   | 1          | 4               | N/A               |
+| Host OS | App run as<br/>native app | App run as<br/>Linux Container |  App run as<br/>Windows Container | ‖<br/>‖ | App run in<br/>K8s (Linux Container) |
+|---------|------------|-----------------|-------------------|----|-----------------------|
+| Linux   | 1          | 4               | N/A               | ‖ | 8             |
 | Mac     | 2          | **★ 5 ★**       | N/A               |
 | Windows | 3          | 6               | 7                 |
 
