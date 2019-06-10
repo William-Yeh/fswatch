@@ -51,3 +51,10 @@ Use [Skaffold](https://skaffold.dev/) to track the changes of ConfigMap stored i
    ```
    % vi fswatch-config.yml
    ```
+
+
+## Demo
+
+You can see the demo at:
+
+[![asciicast](https://asciinema.org/a/250736.svg)](https://asciinema.org/a/250736)
