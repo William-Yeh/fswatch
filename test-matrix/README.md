@@ -9,6 +9,16 @@ Test whether the fswatch works in native app mode and in container mode.
 | Windows | [3](3_native_win)          | [6](6_host_win_container_linux) (LCOW)        | [7](7_host_win_container_win) (WCOW)          |
 
 
+## Demo
+
+
+Simple demo for [1](1_native_linux) case:
+
+[![asciicast](https://asciinema.org/a/250732.svg)](https://asciinema.org/a/250732)
+
+
+## Technical note
+
 When there's a mismatch between host OS and container (esp. [6](6_host_win_container_linux)), fswatch may not work well.  Take [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/troubleshoot/#inotify-on-shared-drives-does-not-work) for example:
 
 > **Inotify on shared drives does not work**
