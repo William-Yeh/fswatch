@@ -6,6 +6,7 @@ Watch for any changes recursively in specific directories.
 
 Docker image: [williamyeh/fswatch](https://hub.docker.com/r/williamyeh/fswatch/)
 
+Detailed article: [Inotify in Containers](https://william-yeh.net/post/2019/06/inotify-in-containers/). 
 
 ## Binary
 

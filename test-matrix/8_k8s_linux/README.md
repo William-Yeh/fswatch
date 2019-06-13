@@ -68,7 +68,7 @@ Let's retry the demo, but this time we'll focus on the directory layout from the
 
 [![asciicast](https://asciinema.org/a/251141.svg)](https://asciinema.org/a/251141)
 
-The demo at [1:55](https://asciinema.org/a/251141?t=1:55) shows the directory layout from the pod's point of view:
+The demo from [0:38](https://asciinema.org/a/251141?t=0:38) to 1:55 shows the directory layout from the pod's point of view:
 
 ```
 /mnt/site # ls -al
